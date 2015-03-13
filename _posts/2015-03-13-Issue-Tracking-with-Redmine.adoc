@@ -1,3 +1,15 @@
-# This is a test
+# Issue Tracking with Redmine
 
-This is a test of **hubpress**
+I was looking around for a solid issue tracking system, written using Ruby on Rails.  There are some good comparisons on wikipedia.  Redmine seems like a good choice; all the standard functionality, that you would expect from a issue tracking system, is available.  For instance:-
+
+* Raising Bugs/Defects
+* Request Features
+* Adding Patches
+* Roadmaps
+* Forums
+* Wiki
+* Code Repository
+
+The code repository can use the source control apps, Git and Subversion.
+
+All in all, a pretty solid choice.
