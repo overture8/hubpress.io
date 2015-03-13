@@ -1,0 +1,6 @@
+# Four Ways Ruby on Rails Can Help You
+
+Ruby on Rails, an open source web development framework, has revolutionized the way we create web applications. By giving developers the necessarily tools and components needed to build powerful apps in an intuitive development environment, RoR makes development more efficient and less troublesome...
+
+
+[Four Ways Ruby on Rails Can Help You](http://sixrevisions.com/web-development/four-ways-ruby-on-rails-can-help-you/)
