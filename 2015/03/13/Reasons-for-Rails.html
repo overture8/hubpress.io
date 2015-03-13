@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Reasons for Rails</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://overture8.github.io/hubpress.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://overture8.github.io/hubpress.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html" />
+    
+    <meta property="og:site_name" content="Notions" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Reasons for Rails" />
+    <meta property="og:description" content="Database Agnostic Through the wonders of the Active Record design pattern, Rails provides you with an ORM (Object-Relational Mapping) layer that makes your life soooo much easier.  It enables your classes to map directly to a database table and instances..." />
+    <meta property="og:url" content="https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html" />
+    <meta property="article:published_time" content="2015-03-13T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-03-13T21:52:14.701Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Reasons for Rails" />
+    <meta name="twitter:description" content="Database Agnostic Through the wonders of the Active Record design pattern, Rails provides you with an ORM (Object-Relational Mapping) layer that makes your life soooo much easier.  It enables your classes to map directly to a database table and instances..." />
+    <meta name="twitter:url" content="https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Notions",
+    "author": {
+        "@type": "Person",
+        "name": "Phil McClure",
+        "image": "https://avatars.githubusercontent.com/u/72452?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://notions.me"
+    },
+    "headline": "Reasons for Rails",
+    "url": "https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html",
+    "datePublished": "2015-03-13T00:00:00.000Z",
+    "dateModified": "2015-03-13T21:52:14.701Z",
+    "description": "Database Agnostic Through the wonders of the Active Record design pattern, Rails provides you with an ORM (Object-Relational Mapping) layer that makes your life soooo much easier.  It enables your classes to map directly to a database table and instances..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Notions" href="https://overture8.github.io/hubpress.io/rss" />
+</head>
+<body class="post-template">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://overture8.github.io/hubpress.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://overture8.github.io/hubpress.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Reasons for Rails</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-03-13">13 March 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="sect2">
+<h3 id="_database_agnostic">Database Agnostic</h3>
+<div class="paragraph">
+<p>Through the wonders of the Active Record design pattern, Rails provides you with an ORM (Object-Relational Mapping) layer that makes your life soooo much easier.  It enables your classes to map directly to a database table and instances of classes (objects) to a given row in a table.  Active Record also creates attributes that map directly to the fields in the database.</p>
+</div>
+<div class="paragraph">
+<p>Further to this, it allows you to define the relationships and constraints between the objects.  This gives you a great deal of functionality and simplifies your code significantly.  For instance, to retrieve a given user and their relate orders you would simply code:-</p>
+</div>
+<div class="paragraph">
+<p>Notice something else?  No SQL query strings!  Embedded SQL queries significantly reduce the maintainability of your code; they also tightly couple your code to a specific DBMS.  With ActiveRecord, it is simple to change the database - just a few changes in the configuration file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_migrations">Migrations</h3>
+<div class="paragraph">
+<p>Migrations are to a database schema, what source control is to code.  In essence, they control the versions of the database schema as the database migrates from one state to another.  This is particularly useful when working in a development team, making it simple for other members of the team to upgrade to the latest version of the database when changes have been made.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mvc_pattern">MVC Pattern</h3>
+<div class="paragraph">
+<p>The compound design pattern known as MVC (model-view-controller) is forced upon you in the Rails framework.  This is no bad thing; MVC is a structured way of developing your code, which results in the business (domain) logic being separated from the presentation (user interface) logic.</p>
+</div>
+<div class="paragraph">
+<p>I’m sure you have seen the code monstrosities, which can emerge from bad practices.  For instance, many Classic ASP pages have business logic code "mish-mashed" in with the presentation logic.  This is a maintenance nightmare for the developer and a major inconvenience for the graphic designer who probably, at best, knows HTML.</p>
+</div>
+<div class="paragraph">
+<p>Following the MVC pattern results in ordered, simple, maintainable and flexible code.  So it is worthwhile learning it - the pattern doesn’t just apply to ruby, so if you decide to go with another framework, it will still be time well spent.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_integrated_javascript_libraries">Integrated Javascript Libraries</h3>
+<div class="paragraph">
+<p>Rail includes the javascript libraries, Prototype and Scriptaculus out of the box.  These libraries make it simple to integrate Ajax functionality and some graphical effects.  Popular libraries like JQuery  are not included as standard (at the time of writing), however it is still possible to use them through conventional, “manual” methods.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_convention_over_configuration">Convention over Configuration</h3>
+<div class="paragraph">
+<p>Java him will only be too happy to tell you; configuring an ORM layer using older versions of hibernate can be quite a large task.  You’ll be glad to know, Rails has a coding practice, which eases the pain.  If you follow a few simple naming conventions then little to none configuration is required.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ruby">Ruby</h3>
+<div class="paragraph">
+<p>Last but not least, the language Ruby.  Ruby may seem alien at first but as soon as you get use to it’s ways you remember why you decided to become a programmer.  The freedom that it grants you, makes it a dream to work with and not only that, it is extremely powerful relative to other object-oriented languages.</p>
+</div>
+<div class="paragraph">
+<p>Blocks and Procs enable a great deal of power.  Dynamic typing (Duck typing) provides you with a lot of flexibility, which lends itself well to web development.  However, these great features are for another article.</p>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/72452?v=3)"><span class="hidden">Phil McClure's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Phil McClure</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Belfast, Northern Ireland</span>
+                    <span class="author-link icon-link"><a href="http://notions.me">http://notions.me</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Reasons%20for%20Rails&amp;url=https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://overture8.github.io/hubpress.io/2015/03/13/Reasons-for-Rails.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://overture8.github.io/hubpress.io">Notions</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
+
+    <script type="text/javascript" src="https://overture8.github.io/hubpress.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="https://overture8.github.io/hubpress.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
