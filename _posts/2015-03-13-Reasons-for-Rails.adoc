@@ -1,0 +1,37 @@
+# Reasons for Rails
+
+### Database Agnostic
+
+Through the wonders of the Active Record design pattern, Rails provides you with an ORM (Object-Relational Mapping) layer that makes your life soooo much easier.  It enables your classes to map directly to a database table and instances of classes (objects) to a given row in a table.  Active Record also creates attributes that map directly to the fields in the database.
+
+Further to this, it allows you to define the relationships and constraints between the objects.  This gives you a great deal of functionality and simplifies your code significantly.  For instance, to retrieve a given user and their relate orders you would simply code:-
+
+[gist url=“https://gist.github.com/overture8/200085"]
+
+Notice something else?  No SQL query strings!  Embedded SQL queries significantly reduce the maintainability of your code; they also tightly couple your code to a specific DBMS.  With ActiveRecord, it is simple to change the database - just a few changes in the configuration file.
+
+### Migrations
+
+Migrations are to a database schema, what source control is to code.  In essence, they control the versions of the database schema as the database migrates from one state to another.  This is particularly useful when working in a development team, making it simple for other members of the team to upgrade to the latest version of the database when changes have been made.
+
+### MVC Pattern
+
+The compound design pattern known as MVC (model-view-controller) is forced upon you in the Rails framework.  This is no bad thing; MVC is a structured way of developing your code, which results in the business (domain) logic being separated from the presentation (user interface) logic.
+
+I’m sure you have seen the code monstrosities, which can emerge from bad practices.  For instance, many Classic ASP pages have business logic code "mish-mashed" in with the presentation logic.  This is a maintenance nightmare for the developer and a major inconvenience for the graphic designer who probably, at best, knows HTML.
+
+Following the MVC pattern results in ordered, simple, maintainable and flexible code.  So it is worthwhile learning it - the pattern doesn’t just apply to ruby, so if you decide to go with another framework, it will still be time well spent.
+
+### Integrated Javascript Libraries
+
+Rail includes the javascript libraries, Prototype and Scriptaculus out of the box.  These libraries make it simple to integrate Ajax functionality and some graphical effects.  Popular libraries like JQuery  are not included as standard (at the time of writing), however it is still possible to use them through conventional, “manual” methods.
+
+### Convention over Configuration
+
+Java him will only be too happy to tell you; configuring an ORM layer using older versions of hibernate can be quite a large task.  You’ll be glad to know, Rails has a coding practice, which eases the pain.  If you follow a few simple naming conventions then little to none configuration is required.
+
+### Ruby
+
+Last but not least, the language Ruby.  Ruby may seem alien at first but as soon as you get use to it’s ways you remember why you decided to become a programmer.  The freedom that it grants you, makes it a dream to work with and not only that, it is extremely powerful relative to other object-oriented languages.
+
+Blocks and Procs enable a great deal of power.  Dynamic typing (Duck typing) provides you with a lot of flexibility, which lends itself well to web development.  However, these great features are for another article.
